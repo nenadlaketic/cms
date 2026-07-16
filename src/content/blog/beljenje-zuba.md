@@ -6,7 +6,7 @@ opis: |-
   test11
 kategorija: Ortodoncija
 vreme: 19 min
-slika: /images/blog/Gemini_Generated_Image_n11e3n11e3n11e3n.png
+slika: /images/blog/Gemini_Generated_Image_wfxrj4wfxrj4wfxr.png
 ---
 
 Beljenje zuba je jedan od najtraženijih estetskih zahvata u modernoj stomatologiji. Ali i jedan od najčešće pogrešno shvaćenih. Hajde da rastavimo mitove od činjenica.
