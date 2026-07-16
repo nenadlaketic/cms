@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: zubar/cms
+  repo: nenadlaketic/cms
   branch: main
 
 local_backend: true
