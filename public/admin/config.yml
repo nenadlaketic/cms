@@ -2,7 +2,7 @@ backend:
   name: github
   repo: nenadlaketic/cms
   branch: main
-  base_url: sveltia-cms-auth.nlaketic1837.workers.dev
+  base_url: https://cms.nlaketic1837.workers.dev
 local_backend: true
 
 media_folder: public/images/blog
