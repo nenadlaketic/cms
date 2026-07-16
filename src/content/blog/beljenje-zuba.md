@@ -1,14 +1,19 @@
 ---
-naslov: Da li je beljenje zuba zaista bezbedno?
-datum: 2026-07-08
-opis: Šta kaže struka i kako da izbegnete osetljivost nakon tretmana.
-kategorija: Estetika
-vreme: 4 min
+naslov: Da li je beljenje zuba zaista bezbedno? TEST test
+datum: 2026-07-06
+opis: |-
+  Šta kaže struka i kako da izbegnete osetljivost nakon tretmana.
+  test11
+kategorija: Ortodoncija
+vreme: 19 min
+slika: /images/blog/Gemini_Generated_Image_n11e3n11e3n11e3n.png
 ---
 
 Beljenje zuba je jedan od najtraženijih estetskih zahvata u modernoj stomatologiji. Ali i jedan od najčešće pogrešno shvaćenih. Hajde da rastavimo mitove od činjenica.
 
 ## Kako beljenje funkcioniše?
+
+test
 
 Preparati za beljenje sadrže **vodonik peroksid** ili karbamid peroksid. Ove supstance prodiru kroz gleđ i razgrađuju obojene molekule unutar zuba. Gleđ ostaje intaktna — beljenje ne uklanja sloj zuba, samo menja boju pigmenata.
 
@@ -22,7 +27,8 @@ Kada se radi pod nadzorom stomatologa — **da, bezbedno je**. Konzumerni (proda
 
 Peroksid prolazi kroz gleđ i može privremeno iritirati nerve zuba. Osetljivost na hladno i toplo posle tretmana je normalna i traje 24–72 sata.
 
-**Kako je smanjiti:**
+**Kako je smanjiti: test**
+
 - Koristite pastu za osetljive zube nedelju dana pre tretmana
 - Izbegavajte hladne i vruće napitke 48 sati posle beljenja
 - Pitajte nas za remineralizacioni gel koji dajemo uz tretman
