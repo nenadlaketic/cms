@@ -4,57 +4,141 @@
       "naziv": "Pregled i dijagnostika",
       "redosled": 1,
       "stavke": [
-        { "naziv": "Prvi pregled i konsultacije", "cena": "Besplatno", "opis": "Uključuje plan terapije" },
-        { "naziv": "Kontrolni pregled", "cena": "1.000 RSD", "opis": "" },
-        { "naziv": "Digitalni retro-alveolarni snimak", "cena": "800 RSD", "opis": "" },
-        { "naziv": "3D (CBCT) snimak", "cena": "4.500 RSD", "opis": "" }
+        {
+          "naziv": "Prvi pregled i konsultacije",
+          "cena": "Besplatno + 1000",
+          "opis": "Uključuje plan terapije"
+        },
+        {
+          "naziv": "Kontrolni pregled",
+          "cena": "1.000 RSD",
+          "opis": ""
+        },
+        {
+          "naziv": "Digitalni retro-alveolarni snimak",
+          "cena": "800 RSD",
+          "opis": ""
+        },
+        {
+          "naziv": "3D (CBCT) snimak",
+          "cena": "4.500 RSD",
+          "opis": ""
+        }
       ]
     },
     {
       "naziv": "Lečenje zuba",
       "redosled": 2,
       "stavke": [
-        { "naziv": "Estetska plomba", "cena": "od 3.500 RSD", "opis": "Po zubu, u zavisnosti od veličine" },
-        { "naziv": "Lečenje kanala (endodoncija)", "cena": "od 4.000 RSD", "opis": "Po kanalu" },
-        { "naziv": "Nadogradnja zuba", "cena": "od 5.000 RSD", "opis": "" },
-        { "naziv": "Vađenje zuba", "cena": "od 2.500 RSD", "opis": "" }
+        {
+          "naziv": "Estetska plomba",
+          "cena": "od 3.500 RSD",
+          "opis": "Po zubu, u zavisnosti od veličine"
+        },
+        {
+          "naziv": "Lečenje kanala (endodoncija)",
+          "cena": "od 4.000 RSD",
+          "opis": "Po kanalu"
+        },
+        {
+          "naziv": "Nadogradnja zuba",
+          "cena": "od 5.000 RSD",
+          "opis": ""
+        },
+        {
+          "naziv": "Vađenje zuba",
+          "cena": "od 2.500 RSD",
+          "opis": ""
+        }
       ]
     },
     {
       "naziv": "Paradontologija",
       "redosled": 3,
       "stavke": [
-        { "naziv": "Uklanjanje kamenca i poliranje", "cena": "3.000 RSD", "opis": "Cela vilica" },
-        { "naziv": "Air-flow pribor za zube", "cena": "2.500 RSD", "opis": "" },
-        { "naziv": "Kiretaža (po zubu)", "cena": "1.500 RSD", "opis": "" }
+        {
+          "naziv": "Uklanjanje kamenca i poliranje",
+          "cena": "3.000 RSD",
+          "opis": "Cela vilica"
+        },
+        {
+          "naziv": "Air-flow pribor za zube",
+          "cena": "2.500 RSD",
+          "opis": ""
+        },
+        {
+          "naziv": "Kiretaža (po zubu)",
+          "cena": "1.500 RSD",
+          "opis": ""
+        }
       ]
     },
     {
       "naziv": "Ortodoncija",
       "redosled": 4,
       "stavke": [
-        { "naziv": "Fiksni aparat (metalni)", "cena": "od 45.000 RSD", "opis": "Po vilici" },
-        { "naziv": "Providne folije", "cena": "od 180.000 RSD", "opis": "Kompletan tretman" },
-        { "naziv": "Mobilni aparat", "cena": "od 20.000 RSD", "opis": "" }
+        {
+          "naziv": "Fiksni aparat (metalni)",
+          "cena": "od 45.000 RSD",
+          "opis": "Po vilici"
+        },
+        {
+          "naziv": "Providne folije",
+          "cena": "od 180.000 RSD",
+          "opis": "Kompletan tretman"
+        },
+        {
+          "naziv": "Mobilni aparat",
+          "cena": "od 20.000 RSD",
+          "opis": ""
+        }
       ]
     },
     {
       "naziv": "Implantologija",
       "redosled": 5,
       "stavke": [
-        { "naziv": "Zubni implant", "cena": "od 55.000 RSD", "opis": "Uključuje ugradnju" },
-        { "naziv": "Suprastruktura (nadogradnja + krunica)", "cena": "od 35.000 RSD", "opis": "" },
-        { "naziv": "Sinus lift", "cena": "od 40.000 RSD", "opis": "" }
+        {
+          "naziv": "Zubni implant",
+          "cena": "od 55.000 RSD",
+          "opis": "Uključuje ugradnju"
+        },
+        {
+          "naziv": "Suprastruktura (nadogradnja + krunica)",
+          "cena": "od 35.000 RSD",
+          "opis": ""
+        },
+        {
+          "naziv": "Sinus lift",
+          "cena": "od 40.000 RSD",
+          "opis": ""
+        }
       ]
     },
     {
       "naziv": "Estetska stomatologija",
       "redosled": 6,
       "stavke": [
-        { "naziv": "Beljenje zuba (ordinacijsko)", "cena": "18.000 RSD", "opis": "Obe vilice" },
-        { "naziv": "Keramička folija", "cena": "od 30.000 RSD", "opis": "Po zubu" },
-        { "naziv": "Metalokeramička krunica", "cena": "od 15.000 RSD", "opis": "" },
-        { "naziv": "Cirkonijum krunica", "cena": "od 28.000 RSD", "opis": "" }
+        {
+          "naziv": "Beljenje zuba (ordinacijsko)",
+          "cena": "18.000 RSD",
+          "opis": "Obe vilice"
+        },
+        {
+          "naziv": "Keramička folija",
+          "cena": "od 30.000 RSD",
+          "opis": "Po zubu"
+        },
+        {
+          "naziv": "Metalokeramička krunica",
+          "cena": "od 15.000 RSD",
+          "opis": ""
+        },
+        {
+          "naziv": "Cirkonijum krunica",
+          "cena": "od 28.000 RSD",
+          "opis": ""
+        }
       ]
     }
   ]
