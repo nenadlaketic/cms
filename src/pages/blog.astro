@@ -21,6 +21,7 @@ const postsForClient = allPosts.map(p => ({
   opis: p.data.opis,
   kategorija: p.data.kategorija,
   vreme: p.data.vreme,
+  slika: p.data.slika ?? null,
   bg: catGradients[p.data.kategorija] ?? 'linear-gradient(135deg,#12433f,#1c6b62)',
 }));
 
@@ -42,7 +43,10 @@ const featured = postsForClient[0];
 
   <section id="featured-section" style="max-width:1200px;margin:0 auto;padding:16px 32px 8px;">
     <a href={`/blog/${featured.slug}`} style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:0;background:#fff;border-radius:26px;overflow:hidden;border:1px solid rgba(18,67,63,0.07);box-shadow:0 24px 60px rgba(18,67,63,0.08);color:inherit;">
-      <div style={`aspect-ratio:16/11;background:${featured.bg};display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);font-size:13px;font-weight:600;`}>Slika članka</div>
+      {allPosts[0]?.data.slika
+        ? <img src={allPosts[0].data.slika} alt={allPosts[0].data.naslov} style="width:100%;aspect-ratio:16/11;object-fit:cover;display:block;" />
+        : <div style={`aspect-ratio:16/11;background:${featured.bg};`}></div>
+      }
       <div style="padding:44px;display:flex;flex-direction:column;justify-content:center;">
         <div style="display:flex;gap:10px;font-size:12px;font-weight:700;color:#c96a44;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:14px;"><span>Izdvojeno · {featured.kategorija}</span><span style="color:#b7bcb9;">· {featured.vreme}</span></div>
         <h2 style="font-family:Newsreader,serif;font-size:34px;font-weight:500;line-height:1.12;letter-spacing:-0.01em;margin:0 0 14px;color:#12433f;">{featured.naslov}</h2>
@@ -77,7 +81,7 @@ const featured = postsForClient[0];
     const gridPosts = showFeatured ? filtered.slice(1) : filtered;
     document.getElementById('posts-grid').innerHTML = gridPosts.map(p => `
       <a href="/blog/${p.slug}" style="display:flex;flex-direction:column;background:#fff;border-radius:22px;overflow:hidden;border:1px solid rgba(18,67,63,0.07);color:inherit;">
-        <div style="aspect-ratio:16/10;background:${p.bg};display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.65);font-size:13px;font-weight:600;">Slika članka</div>
+        ${p.slika ? `<img src="${p.slika}" alt="${p.naslov}" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block;">` : `<div style="aspect-ratio:16/10;background:${p.bg};"></div>`}
         <div style="padding:22px;display:flex;flex-direction:column;flex:1;">
           <div style="display:flex;gap:10px;font-size:12px;font-weight:700;color:#c96a44;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px;"><span>${p.kategorija}</span><span style="color:#b7bcb9;">· ${p.vreme}</span></div>
           <h3 style="font-family:Newsreader,serif;font-size:22px;font-weight:500;line-height:1.2;margin:0 0 10px;color:#12433f;">${p.naslov}</h3>
