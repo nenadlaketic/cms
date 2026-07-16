@@ -1,0 +1,127 @@
+backend:
+  name: github
+  repo: zubar/cms
+  branch: main
+
+local_backend: true
+
+media_folder: public/images/blog
+public_folder: /images/blog
+
+locale: sr
+
+collections:
+
+  - name: blog
+    label: Blog
+    label_singular: Članak
+    folder: src/content/blog
+    create: true
+    delete: true
+    format: frontmatter
+    extension: md
+    slug: "{{slug}}"
+    fields:
+      - label: Naslov
+        name: naslov
+        widget: string
+      - label: Datum objave
+        name: datum
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        format: YYYY-MM-DD
+      - label: Kratak opis
+        name: opis
+        widget: text
+      - label: Kategorija
+        name: kategorija
+        widget: select
+        options:
+          - label: Saveti
+            value: Saveti
+          - label: Estetika
+            value: Estetika
+          - label: Ortodoncija
+            value: Ortodoncija
+          - label: Implantologija
+            value: Implantologija
+      - label: Vreme čitanja
+        name: vreme
+        widget: string
+        hint: "npr. 4 min"
+      - label: Naslovna slika
+        name: slika
+        widget: image
+        required: false
+      - label: Sadržaj
+        name: body
+        widget: markdown
+
+  - name: usluge
+    label: Usluge
+    label_singular: Usluga
+    folder: src/content/usluge
+    create: true
+    delete: true
+    format: frontmatter
+    extension: md
+    slug: "{{fields.broj}}-{{slug}}"
+    fields:
+      - label: Naziv
+        name: naziv
+        widget: string
+      - label: Redni broj
+        name: broj
+        widget: string
+        hint: "npr. 01, 02, 03"
+      - label: Opis
+        name: opis
+        widget: text
+      - label: Stavke usluge
+        name: stavke
+        widget: list
+        label_singular: Stavka
+        field:
+          label: Stavka
+          name: stavka
+          widget: string
+      - label: Opis usluge
+        name: body
+        widget: markdown
+        required: false
+
+  - name: cenovnik
+    label: Cenovnik
+    files:
+      - label: Cene usluga
+        name: grupe
+        file: src/content/cenovnik/cene.json
+        fields:
+          - label: Grupe cena
+            name: grupe
+            widget: list
+            label_singular: Grupa
+            fields:
+              - label: Naziv grupe
+                name: naziv
+                widget: string
+              - label: Redosled prikaza
+                name: redosled
+                widget: number
+                value_type: int
+              - label: Stavke
+                name: stavke
+                widget: list
+                label_singular: Stavka
+                fields:
+                  - label: Naziv usluge
+                    name: naziv
+                    widget: string
+                  - label: Cena
+                    name: cena
+                    widget: string
+                  - label: Napomena
+                    name: opis
+                    widget: string
+                    required: false

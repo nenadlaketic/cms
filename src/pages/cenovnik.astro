@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const cenovnikEntry = await getCollection('cenovnik');
+const grupe = (cenovnikEntry[0]?.data ?? [])
+  .sort((a, b) => a.redosled - b.redosled);
+---
+<Layout title="Cenovnik" activePage="cenovnik">
+
+<div style="min-height:100vh;">
+
+  <section style="max-width:1200px;margin:0 auto;padding:64px 32px 32px;">
+    <div style="font-size:14px;font-weight:700;color:#c96a44;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;">Cenovnik</div>
+    <h1 style="font-family:Newsreader,serif;font-weight:500;font-size:52px;line-height:1.04;letter-spacing:-0.02em;margin:0 0 16px;color:#12433f;max-width:640px;">Jasne cene, bez skrivenih troškova</h1>
+    <p style="font-size:18px;line-height:1.6;color:#41544f;max-width:580px;margin:0;">Pregled je besplatan. Cenu terapije uvek dogovaramo unapred, pre početka lečenja.</p>
+  </section>
+
+  <section style="max-width:960px;margin:0 auto;padding:20px 32px 40px;display:flex;flex-direction:column;gap:26px;">
+    {grupe.map(g => (
+      <div style="background:#fff;border-radius:24px;border:1px solid rgba(18,67,63,0.07);overflow:hidden;">
+        <div style="padding:22px 30px;background:#12433f;">
+          <h2 style="font-family:Newsreader,serif;font-weight:500;font-size:24px;letter-spacing:-0.01em;margin:0;color:#f7f4ee;">{g.naziv}</h2>
+        </div>
+        <div>
+          {g.stavke.map(r => (
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:17px 30px;border-bottom:1px solid rgba(18,67,63,0.07);">
+              <div>
+                <div style="font-size:16px;font-weight:600;color:#12433f;">{r.naziv}</div>
+                {r.opis && <div style="font-size:13px;color:#8a958f;margin-top:2px;">{r.opis}</div>}
+              </div>
+              <div style="font-family:Newsreader,serif;font-size:19px;font-weight:600;color:#1c6b62;white-space:nowrap;">{r.cena}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+    <p style="font-size:13px;color:#8a958f;line-height:1.6;margin:6px 4px 0;">* Cene su okvirne i mogu se razlikovati u zavisnosti od složenosti slučaja. Tačnu cenu terapije dobijate nakon pregleda. Cenovnik je informativnog karaktera.</p>
+  </section>
+
+  <section style="background:#e4efe9;">
+    <div style="max-width:1000px;margin:0 auto;padding:60px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;">
+      <div>
+        <h2 style="font-family:Newsreader,serif;font-weight:500;font-size:34px;line-height:1.1;letter-spacing:-0.02em;margin:0 0 8px;color:#12433f;">Besplatan prvi pregled</h2>
+        <p style="font-size:16px;line-height:1.6;color:#41544f;margin:0;max-width:460px;">Dođite, upoznajte tim i saznajte tačnu cenu vaše terapije — bez obaveze.</p>
+      </div>
+      <a href="/#zakazivanje" style="background:#c96a44;color:#fff;padding:15px 30px;border-radius:999px;font-size:15px;font-weight:700;white-space:nowrap;">Zakaži termin</a>
+    </div>
+  </section>
+
+</div>
+
+</Layout>

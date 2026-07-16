@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const usluge = (await getCollection('usluge'))
+  .sort((a, b) => a.data.broj.localeCompare(b.data.broj));
+---
+<Layout title="Usluge" activePage="usluge">
+
+<div style="min-height:100vh;">
+
+  <section style="max-width:1200px;margin:0 auto;padding:64px 32px 40px;">
+    <div style="font-size:14px;font-weight:700;color:#c96a44;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;">Usluge</div>
+    <h1 style="font-family:Newsreader,serif;font-weight:500;font-size:52px;line-height:1.04;letter-spacing:-0.02em;margin:0 0 16px;color:#12433f;max-width:660px;">Sve što vaš osmeh traži, na jednom mestu</h1>
+    <p style="font-size:18px;line-height:1.6;color:#41544f;max-width:600px;margin:0;">Od redovnog pregleda do implantologije — kompletna stomatološka nega uz nežan pristup i savremenu opremu.</p>
+  </section>
+
+  <section style="max-width:1200px;margin:0 auto;padding:0 32px 80px;display:flex;flex-direction:column;gap:20px;">
+    {usluge.map(u => (
+      <div style="background:#fff;border-radius:26px;padding:40px;border:1px solid rgba(18,67,63,0.07);display:grid;grid-template-columns:0.9fr 1.1fr;gap:44px;align-items:center;">
+        <div>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+            <span style="width:52px;height:52px;border-radius:15px;background:#e4efe9;display:inline-flex;align-items:center;justify-content:center;font-family:Newsreader,serif;font-size:22px;color:#1c6b62;font-weight:600;">{u.data.broj}</span>
+            <h2 style="font-family:Newsreader,serif;font-weight:500;font-size:30px;line-height:1.1;letter-spacing:-0.01em;margin:0;color:#12433f;">{u.data.naziv}</h2>
+          </div>
+          <p style="font-size:16px;line-height:1.6;color:#556661;margin:0 0 22px;">{u.data.opis}</p>
+          <a href="/cenovnik" style="font-size:15px;font-weight:700;color:#1c6b62;">Pogledaj cene →</a>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          {u.data.stavke.map(it => (
+            <div style="display:flex;align-items:flex-start;gap:10px;background:#f7f4ee;border-radius:14px;padding:14px 16px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a9d7e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M20 6 9 17l-5-5"></path></svg>
+              <span style="font-size:14px;line-height:1.4;color:#12433f;font-weight:600;">{it}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </section>
+
+  <section style="background:#e4efe9;">
+    <div style="max-width:1000px;margin:0 auto;padding:64px 32px;text-align:center;">
+      <h2 style="font-family:Newsreader,serif;font-weight:500;font-size:38px;line-height:1.1;letter-spacing:-0.02em;margin:0 0 14px;color:#12433f;">Niste sigurni koja usluga vam treba?</h2>
+      <p style="font-size:17px;line-height:1.6;color:#41544f;margin:0 auto 28px;max-width:520px;">Dođite na pregled — utvrdićemo stanje i predložiti plan terapije prilagođen vama.</p>
+      <a href="/#zakazivanje" style="display:inline-block;background:#12433f;color:#f7f4ee;padding:15px 30px;border-radius:999px;font-size:15px;font-weight:700;">Zakaži pregled</a>
+    </div>
+  </section>
+
+</div>
+
+</Layout>

@@ -1,17 +1,314 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
+<Layout title="Početna" activePage="home">
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<div style="min-height:100vh;">
+
+  <section id="pocetna" style="max-width:1200px;margin:0 auto;padding:72px 32px 40px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:#e4efe9;color:#1c6b62;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:0.02em;margin-bottom:24px;">
+        <span style="width:7px;height:7px;border-radius:50%;background:#3a9d7e;"></span>
+        Stomatološka ordinacija · Novi Sad
+      </div>
+      <h1 style="font-family:Newsreader,serif;font-weight:500;font-size:60px;line-height:1.04;letter-spacing:-0.02em;margin:0 0 20px;color:#12433f;">
+        Vaš osmeh u<br><em style="font-style:italic;color:#c96a44;">sigurnim rukama</em>
+      </h1>
+      <p style="font-size:18px;line-height:1.6;color:#41544f;max-width:460px;margin:0 0 32px;">
+        Savremena stomatologija bez straha i žurbe. Nežan pristup, moderna oprema i tim koji brine o svakom detalju vašeg osmeha.
+      </p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="#zakazivanje" style="background:#12433f;color:#f7f4ee;padding:15px 28px;border-radius:999px;font-size:15px;font-weight:700;white-space:nowrap;">Zakaži termin</a>
+        <a href="#usluge" style="background:#fff;color:#12433f;padding:15px 28px;border-radius:999px;font-size:15px;font-weight:700;border:1px solid rgba(18,67,63,0.15);white-space:nowrap;">Naše usluge</a>
+      </div>
+      <div style="display:flex;gap:36px;margin-top:44px;">
+        <div><div style="font-family:Newsreader,serif;font-size:30px;color:#12433f;">15+</div><div style="font-size:13px;color:#6a7772;font-weight:600;">godina iskustva</div></div>
+        <div><div style="font-family:Newsreader,serif;font-size:30px;color:#12433f;">8.000+</div><div style="font-size:13px;color:#6a7772;font-weight:600;">zadovoljnih pacijenata</div></div>
+        <div><div style="font-family:Newsreader,serif;font-size:30px;color:#12433f;">4.9★</div><div style="font-size:13px;color:#6a7772;font-weight:600;">prosečna ocena</div></div>
+      </div>
+    </div>
+    <div style="position:relative;">
+      <div style="aspect-ratio:4/5;border-radius:28px;background:linear-gradient(160deg,#1c6b62,#12433f);display:flex;align-items:flex-end;justify-content:center;padding:24px;overflow:hidden;box-shadow:0 30px 70px rgba(18,67,63,0.28);">
+        <span style="color:rgba(247,244,238,0.55);font-size:14px;font-weight:600;">Fotografija ordinacije</span>
+      </div>
+      <div style="position:absolute;top:22px;left:-24px;background:#fff;border-radius:18px;padding:16px 20px;box-shadow:0 16px 40px rgba(18,67,63,0.16);">
+        <div style="font-size:12px;color:#6a7772;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">Radno vreme</div>
+        <div style="font-size:15px;color:#12433f;font-weight:700;margin-top:4px;">Pon–Pet · 09–20h</div>
+        <div style="font-size:14px;color:#41544f;">Subota · 09–14h</div>
+      </div>
+      <div style="position:absolute;bottom:26px;right:-20px;background:#c96a44;color:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 16px 40px rgba(201,106,68,0.35);">
+        <div style="font-size:13px;font-weight:700;">Bez čekanja</div>
+        <div style="font-size:12px;opacity:0.9;">termin isti dan</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="usluge" style="max-width:1200px;margin:0 auto;padding:64px 32px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap;">
+      <div>
+        <div style="font-size:14px;font-weight:700;color:#c96a44;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;">Usluge</div>
+        <h2 style="font-family:Newsreader,serif;font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-0.02em;margin:0;color:#12433f;">Sve što vaš osmeh traži,<br>na jednom mestu</h2>
+      </div>
+      <a href="#zakazivanje" style="font-size:15px;font-weight:700;color:#1c6b62;">Zakaži pregled →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;">
+      <div style="background:#fff;border-radius:22px;padding:28px;border:1px solid rgba(18,67,63,0.07);">
+        <div style="font-family:Newsreader,serif;font-size:20px;color:#c9c2b4;margin-bottom:14px;">01</div>
+        <h3 style="font-size:20px;font-weight:700;margin:0 0 8px;color:#12433f;">Pregled i dijagnostika</h3>
+        <p style="font-size:15px;line-height:1.55;color:#556661;margin:0;">Detaljan pregled, digitalni snimak i plan terapije prilagođen vama.</p>
+      </div>
+      <div style="background:#fff;border-radius:22px;padding:28px;border:1px solid rgba(18,67,63,0.07);">
+        <div style="font-family:Newsreader,serif;font-size:20px;color:#c9c2b4;margin-bottom:14px;">02</div>
+        <h3 style="font-size:20px;font-weight:700;margin:0 0 8px;color:#12433f;">Lečenje zuba</h3>
+        <p style="font-size:15px;line-height:1.55;color:#556661;margin:0;">Estetske plombe, lečenje karijesa i endodoncija bez bola.</p>
+      </div>
+      <div style="background:#fff;border-radius:22px;padding:28px;border:1px solid rgba(18,67,63,0.07);">
+        <div style="font-family:Newsreader,serif;font-size:20px;color:#c9c2b4;margin-bottom:14px;">03</div>
+        <h3 style="font-size:20px;font-weight:700;margin:0 0 8px;color:#12433f;">Paradontologija</h3>
+        <p style="font-size:15px;line-height:1.55;color:#556661;margin:0;">Nega desni, uklanjanje kamenca i lečenje parodontopatije.</p>
+      </div>
+      <div style="background:#fff;border-radius:22px;padding:28px;border:1px solid rgba(18,67,63,0.07);">
+        <div style="font-family:Newsreader,serif;font-size:20px;color:#c9c2b4;margin-bottom:14px;">04</div>
+        <h3 style="font-size:20px;font-weight:700;margin:0 0 8px;color:#12433f;">Ortodoncija</h3>
+        <p style="font-size:15px;line-height:1.55;color:#556661;margin:0;">Fiksne i providne proteze za pravilan zagriz i ravne zube.</p>
+      </div>
+      <div style="background:#fff;border-radius:22px;padding:28px;border:1px solid rgba(18,67,63,0.07);">
+        <div style="font-family:Newsreader,serif;font-size:20px;color:#c9c2b4;margin-bottom:14px;">05</div>
+        <h3 style="font-size:20px;font-weight:700;margin:0 0 8px;color:#12433f;">Implantologija</h3>
+        <p style="font-size:15px;line-height:1.55;color:#556661;margin:0;">Trajna zamena zuba implantima uz precizno 3D planiranje.</p>
+      </div>
+      <div style="background:#fff;border-radius:22px;padding:28px;border:1px solid rgba(18,67,63,0.07);">
+        <div style="font-family:Newsreader,serif;font-size:20px;color:#c9c2b4;margin-bottom:14px;">06</div>
+        <h3 style="font-size:20px;font-weight:700;margin:0 0 8px;color:#12433f;">Estetska stomatologija</h3>
+        <p style="font-size:15px;line-height:1.55;color:#556661;margin:0;">Beljenje zuba, folije i korekcije za blistav osmeh.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="o-nama" style="background:#12433f;color:#f7f4ee;">
+    <div style="max-width:1200px;margin:0 auto;padding:64px 32px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;">
+      <div>
+        <div style="font-size:14px;font-weight:700;color:#8fc3b3;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;">O nama</div>
+        <h2 style="font-family:Newsreader,serif;font-weight:500;font-size:40px;line-height:1.08;letter-spacing:-0.02em;margin:0 0 18px;">Ordinacija u kojoj se osećate opušteno</h2>
+        <p style="font-size:17px;line-height:1.65;color:rgba(247,244,238,0.82);margin:0;">Verujemo da poseta stomatologu ne mora biti stresna. Zato smo stvorili prostor gde vas dočekuje topao tim, jasno objašnjena terapija i tehnologija koja čini tretmane bržim i bezbolnijim.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div style="background:rgba(247,244,238,0.08);border-radius:18px;padding:22px;"><div style="font-family:Newsreader,serif;font-size:34px;">100%</div><div style="font-size:14px;color:rgba(247,244,238,0.75);">bezbolna anestezija</div></div>
+        <div style="background:rgba(247,244,238,0.08);border-radius:18px;padding:22px;"><div style="font-family:Newsreader,serif;font-size:34px;">3D</div><div style="font-size:14px;color:rgba(247,244,238,0.75);">digitalna dijagnostika</div></div>
+        <div style="background:rgba(247,244,238,0.08);border-radius:18px;padding:22px;"><div style="font-family:Newsreader,serif;font-size:34px;">6</div><div style="font-size:14px;color:rgba(247,244,238,0.75);">specijalista u timu</div></div>
+        <div style="background:rgba(247,244,238,0.08);border-radius:18px;padding:22px;"><div style="font-family:Newsreader,serif;font-size:34px;">24h</div><div style="font-size:14px;color:rgba(247,244,238,0.75);">podrška nakon zahvata</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" style="max-width:1200px;margin:0 auto;padding:64px 32px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap;">
+      <div>
+        <div style="font-size:14px;font-weight:700;color:#c96a44;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;">Blog</div>
+        <h2 style="font-family:Newsreader,serif;font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-0.02em;margin:0;color:#12433f;">Saveti za zdrav osmeh</h2>
+      </div>
+      <a href="/blog" style="font-size:15px;font-weight:700;color:#1c6b62;">Svi članci →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <article style="background:#fff;border-radius:22px;overflow:hidden;border:1px solid rgba(18,67,63,0.07);">
+        <div style="aspect-ratio:16/10;background:linear-gradient(135deg,#e4efe9,#cfe3da);display:flex;align-items:center;justify-content:center;color:#7d9b90;font-size:13px;font-weight:600;">Slika članka</div>
+        <div style="padding:22px;">
+          <div style="display:flex;gap:10px;font-size:12px;font-weight:700;color:#c96a44;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px;"><span>Saveti</span><span style="color:#b7bcb9;">· 5 min</span></div>
+          <h3 style="font-family:Newsreader,serif;font-size:22px;font-weight:500;line-height:1.2;margin:0 0 10px;color:#12433f;">Kako pravilno prati zube i ne oštetiti gleđ</h3>
+          <p style="font-size:14px;line-height:1.55;color:#667772;margin:0 0 16px;">Tehnika, tvrdoća četkice i tri greške koje pravi većina ljudi.</p>
+          <a href="/blog/pranje-zuba" style="font-size:14px;font-weight:700;color:#1c6b62;">Pročitaj →</a>
+        </div>
+      </article>
+      <article style="background:#fff;border-radius:22px;overflow:hidden;border:1px solid rgba(18,67,63,0.07);">
+        <div style="aspect-ratio:16/10;background:linear-gradient(135deg,#f2e4dc,#ecd3c6);display:flex;align-items:center;justify-content:center;color:#b58a75;font-size:13px;font-weight:600;">Slika članka</div>
+        <div style="padding:22px;">
+          <div style="display:flex;gap:10px;font-size:12px;font-weight:700;color:#c96a44;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px;"><span>Estetika</span><span style="color:#b7bcb9;">· 4 min</span></div>
+          <h3 style="font-family:Newsreader,serif;font-size:22px;font-weight:500;line-height:1.2;margin:0 0 10px;color:#12433f;">Da li je beljenje zuba zaista bezbedno?</h3>
+          <p style="font-size:14px;line-height:1.55;color:#667772;margin:0 0 16px;">Šta kaže struka i kako da izbegnete osetljivost nakon tretmana.</p>
+          <a href="/blog/beljenje-zuba" style="font-size:14px;font-weight:700;color:#1c6b62;">Pročitaj →</a>
+        </div>
+      </article>
+      <article style="background:#fff;border-radius:22px;overflow:hidden;border:1px solid rgba(18,67,63,0.07);">
+        <div style="aspect-ratio:16/10;background:linear-gradient(135deg,#dfe8ee,#c7d9e4);display:flex;align-items:center;justify-content:center;color:#7e97a6;font-size:13px;font-weight:600;">Slika članka</div>
+        <div style="padding:22px;">
+          <div style="display:flex;gap:10px;font-size:12px;font-weight:700;color:#c96a44;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px;"><span>Implantologija</span><span style="color:#b7bcb9;">· 6 min</span></div>
+          <h3 style="font-family:Newsreader,serif;font-size:22px;font-weight:500;line-height:1.2;margin:0 0 10px;color:#12433f;">Šta da očekujete pri ugradnji implanta</h3>
+          <p style="font-size:14px;line-height:1.55;color:#667772;margin:0 0 16px;">Korak po korak kroz proceduru, oporavak i negu implanta.</p>
+          <a href="/blog/ugradnja-implanta" style="font-size:14px;font-weight:700;color:#1c6b62;">Pročitaj →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="zakazivanje" style="background:#e4efe9;">
+    <div style="max-width:1200px;margin:0 auto;padding:72px 32px;display:grid;grid-template-columns:0.85fr 1.15fr;gap:48px;align-items:start;">
+      <div style="position:sticky;top:100px;">
+        <div style="font-size:14px;font-weight:700;color:#c96a44;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;">Zakazivanje</div>
+        <h2 style="font-family:Newsreader,serif;font-weight:500;font-size:40px;line-height:1.08;letter-spacing:-0.02em;margin:0 0 18px;color:#12433f;">Rezervišite svoj termin za par klikova</h2>
+        <p style="font-size:16px;line-height:1.6;color:#41544f;margin:0 0 28px;">Izaberite uslugu, dan i vreme koje vam odgovara. Potvrdu i podsetnik šaljemo SMS-om.</p>
+        <div id="kontakt" style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;color:#12433f;font-weight:600;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1c6b62" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"></path></svg>
+            +381 21 123 456
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;color:#12433f;font-weight:600;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1c6b62" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Bulevar oslobođenja 12, Novi Sad
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:15px;color:#12433f;font-weight:600;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1c6b62" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            Pon–Pet 09–20h · Sub 09–14h
+          </div>
+        </div>
+      </div>
+
+      <div id="booking-form" style="background:#fff;border-radius:26px;padding:34px;box-shadow:0 24px 60px rgba(18,67,63,0.12);border:1px solid rgba(18,67,63,0.06);">
+        <!-- Success state (hidden by default) -->
+        <div id="booking-success" style="display:none;text-align:center;padding:24px 8px;">
+          <div style="width:64px;height:64px;border-radius:50%;background:#e4efe9;display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1c6b62" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+          </div>
+          <h3 style="font-family:Newsreader,serif;font-size:30px;font-weight:500;margin:0 0 12px;color:#12433f;">Termin je zakazan!</h3>
+          <p style="font-size:16px;color:#41544f;margin:0 0 24px;">Poslali smo vam potvrdu SMS-om. Vidimo se uskoro.</p>
+          <div style="text-align:left;background:#f7f4ee;border-radius:16px;padding:20px;margin-bottom:24px;">
+            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(18,67,63,0.08);"><span style="color:#6a7772;font-weight:600;">Usluga</span><span id="sum-service" style="color:#12433f;font-weight:700;"></span></div>
+            <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(18,67,63,0.08);"><span style="color:#6a7772;font-weight:600;">Termin</span><span id="sum-datetime" style="color:#12433f;font-weight:700;"></span></div>
+            <div style="display:flex;justify-content:space-between;padding:8px 0;"><span style="color:#6a7772;font-weight:600;">Pacijent</span><span id="sum-name" style="color:#12433f;font-weight:700;"></span></div>
+          </div>
+          <button id="booking-reset" style="background:#12433f;color:#f7f4ee;border:none;padding:14px 26px;border-radius:999px;font-family:Manrope,sans-serif;font-size:15px;font-weight:700;cursor:pointer;">Zakaži novi termin</button>
+        </div>
+
+        <!-- Form state -->
+        <div id="booking-fields">
+          <h3 style="font-family:Newsreader,serif;font-size:26px;font-weight:500;margin:0 0 24px;color:#12433f;">Novi termin</h3>
+
+          <div style="font-size:13px;font-weight:700;color:#6a7772;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;">Usluga</div>
+          <div id="service-chips" style="display:flex;flex-wrap:wrap;gap:9px;margin-bottom:26px;"></div>
+
+          <div style="font-size:13px;font-weight:700;color:#6a7772;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;">Datum</div>
+          <div id="day-chips" style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:26px;"></div>
+
+          <div style="font-size:13px;font-weight:700;color:#6a7772;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;">Vreme</div>
+          <div id="time-chips" style="display:flex;flex-wrap:wrap;gap:9px;margin-bottom:26px;"></div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px;">
+            <div>
+              <div style="font-size:13px;font-weight:700;color:#6a7772;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Ime i prezime</div>
+              <input id="booking-name" placeholder="Petar Petrović" style="width:100%;padding:13px 15px;border-radius:12px;border:1px solid rgba(18,67,63,0.2);font-family:Manrope,sans-serif;font-size:15px;color:#12433f;background:#fff;outline:none;">
+            </div>
+            <div>
+              <div style="font-size:13px;font-weight:700;color:#6a7772;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Telefon</div>
+              <input id="booking-phone" placeholder="06x xxx xxxx" style="width:100%;padding:13px 15px;border-radius:12px;border:1px solid rgba(18,67,63,0.2);font-family:Manrope,sans-serif;font-size:15px;color:#12433f;background:#fff;outline:none;">
+            </div>
+          </div>
+
+          <div id="booking-error" style="display:none;background:#fbeae3;color:#b8502e;padding:11px 15px;border-radius:12px;font-size:14px;font-weight:600;margin-bottom:16px;">Molimo popunite uslugu, datum, vreme i vaše podatke.</div>
+
+          <button id="booking-submit" style="width:100%;background:#c96a44;color:#fff;border:none;padding:16px;border-radius:14px;font-family:Manrope,sans-serif;font-size:16px;font-weight:700;cursor:pointer;">Potvrdi termin</button>
+          <p style="text-align:center;font-size:13px;color:#8a958f;margin:14px 0 0;">Zakazivanje je besplatno i bez obaveze.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function() {
+  const services = ['Pregled i dijagnostika','Lečenje zuba','Paradontologija','Ortodoncija','Implantologija','Estetska stomatologija'];
+  const times = ['09:00','09:30','10:00','11:00','12:00','15:30','16:00','17:00'];
+  const dowShort = ['Ned','Pon','Uto','Sre','Čet','Pet','Sub'];
+  const dayFull = ['nedelja','ponedeljak','utorak','sreda','četvrtak','petak','subota'];
+  const months = ['jan','feb','mar','apr','maj','jun','jul','avg','sep','okt','nov','dec'];
+
+  let state = { service: 'Pregled i dijagnostika', dayIdx: null, time: '', name: '', phone: '' };
+
+  const chipBase = 'padding:11px 16px;border-radius:12px;border:1px solid rgba(18,67,63,0.2);background:#fff;color:#12433f;font-family:Manrope,sans-serif;font-size:14px;font-weight:600;line-height:1.25;text-align:center;cursor:pointer;';
+  const chipSel = 'padding:11px 16px;border-radius:12px;border:1px solid #12433f;background:#12433f;color:#f7f4ee;font-family:Manrope,sans-serif;font-size:14px;font-weight:600;line-height:1.25;text-align:center;cursor:pointer;';
+  const timeBase = 'padding:9px 15px;border-radius:999px;border:1px solid rgba(18,67,63,0.2);background:#fff;color:#12433f;font-family:Manrope,sans-serif;font-size:14px;font-weight:600;cursor:pointer;';
+  const timeSel = 'padding:9px 15px;border-radius:999px;border:1px solid #12433f;background:#12433f;color:#f7f4ee;font-family:Manrope,sans-serif;font-size:14px;font-weight:600;cursor:pointer;';
+  const dayBase = 'display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 4px;border-radius:14px;border:1px solid rgba(18,67,63,0.15);background:#fff;color:#12433f;cursor:pointer;min-width:0;font-family:Manrope,sans-serif;';
+  const daySel = 'display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 4px;border-radius:14px;border:1px solid #12433f;background:#12433f;color:#f7f4ee;cursor:pointer;min-width:0;font-family:Manrope,sans-serif;';
+  const dayClosed = 'display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 4px;border-radius:14px;border:1px solid rgba(18,67,63,0.1);background:#f0ede7;color:#b7bcb9;cursor:not-allowed;min-width:0;font-family:Manrope,sans-serif;';
+
+  function getDays() {
+    const today = new Date();
+    return Array.from({length:7}, (_, i) => {
+      const d = new Date(today.getFullYear(), today.getMonth(), today.getDate() + i);
+      return { idx: i, dow: dowShort[d.getDay()], day: d.getDate(), closed: d.getDay() === 0,
+        label: dayFull[d.getDay()] + ', ' + d.getDate() + '. ' + months[d.getMonth()] };
+    });
+  }
+
+  function render() {
+    const days = getDays();
+
+    // Service chips
+    const sc = document.getElementById('service-chips');
+    if (sc) {
+      sc.innerHTML = services.map(s =>
+        `<button onclick="window.__bookingSelectService('${s}')" style="${s===state.service?chipSel:chipBase}">${s}</button>`
+      ).join('');
+    }
+
+    // Day chips
+    const dc = document.getElementById('day-chips');
+    if (dc) {
+      dc.innerHTML = days.map(d => {
+        const st = d.closed ? dayClosed : (d.idx===state.dayIdx ? daySel : dayBase);
+        const click = d.closed ? '' : `onclick="window.__bookingSelectDay(${d.idx})"`;
+        return `<button ${click} style="${st}"><span style="font-size:11px;font-weight:700;opacity:0.7;">${d.dow}</span><span style="font-size:19px;font-weight:700;font-family:Newsreader,serif;">${d.day}</span></button>`;
+      }).join('');
+    }
+
+    // Time chips
+    const tc = document.getElementById('time-chips');
+    if (tc) {
+      tc.innerHTML = times.map(t =>
+        `<button onclick="window.__bookingSelectTime('${t}')" style="${t===state.time?timeSel:timeBase}">${t}</button>`
+      ).join('');
+    }
+
+    // Name/phone
+    const ni = document.getElementById('booking-name');
+    const pi = document.getElementById('booking-phone');
+    if (ni) ni.value = state.name;
+    if (pi) pi.value = state.phone;
+  }
+
+  window.__bookingSelectService = function(s) { state.service = s; document.getElementById('booking-error').style.display='none'; render(); };
+  window.__bookingSelectDay = function(i) { state.dayIdx = i; document.getElementById('booking-error').style.display='none'; render(); };
+  window.__bookingSelectTime = function(t) { state.time = t; document.getElementById('booking-error').style.display='none'; render(); };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    render();
+
+    document.getElementById('booking-name')?.addEventListener('input', function(e) { state.name = e.target.value; });
+    document.getElementById('booking-phone')?.addEventListener('input', function(e) { state.phone = e.target.value; });
+
+    document.getElementById('booking-submit')?.addEventListener('click', function() {
+      const days = getDays();
+      const selDay = state.dayIdx != null ? days[state.dayIdx] : null;
+      const valid = state.service && state.time && selDay && !selDay.closed && state.name.trim() && state.phone.trim();
+      if (!valid) { document.getElementById('booking-error').style.display='block'; return; }
+
+      document.getElementById('sum-service').textContent = state.service;
+      document.getElementById('sum-datetime').textContent = selDay.label + ' u ' + state.time;
+      document.getElementById('sum-name').textContent = state.name;
+
+      document.getElementById('booking-fields').style.display = 'none';
+      document.getElementById('booking-success').style.display = 'block';
+    });
+
+    document.getElementById('booking-reset')?.addEventListener('click', function() {
+      state = { service: 'Pregled i dijagnostika', dayIdx: null, time: '', name: '', phone: '' };
+      document.getElementById('booking-fields').style.display = 'block';
+      document.getElementById('booking-success').style.display = 'none';
+      document.getElementById('booking-error').style.display = 'none';
+      render();
+    });
+  });
+})();
+</script>
+
+</Layout>

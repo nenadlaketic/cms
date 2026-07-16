@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = (await getCollection('blog'))
+  .sort((a, b) => b.data.datum.valueOf() - a.data.datum.valueOf());
+
+const cats = ['Sve', 'Saveti', 'Estetika', 'Ortodoncija', 'Implantologija'];
+
+const catGradients: Record<string, string> = {
+  Saveti: 'linear-gradient(135deg,#1c6b62,#12433f)',
+  Estetika: 'linear-gradient(135deg,#c96a44,#a94e2c)',
+  Implantologija: 'linear-gradient(135deg,#4a7c8c,#2f5766)',
+  Ortodoncija: 'linear-gradient(135deg,#6b7f9e,#3f4f6b)',
+};
+
+const postsForClient = allPosts.map(p => ({
+  slug: p.id,
+  naslov: p.data.naslov,
+  datum: p.data.datum.toISOString(),
+  opis: p.data.opis,
+  kategorija: p.data.kategorija,
+  vreme: p.data.vreme,
+  bg: catGradients[p.data.kategorija] ?? 'linear-gradient(135deg,#12433f,#1c6b62)',
+}));
+
+const featured = postsForClient[0];
+---
+<Layout title="Blog" activePage="blog">
+
+<div style="min-height:100vh;">
+
+  <section style="max-width:1200px;margin:0 auto;padding:64px 32px 32px;">
+    <div style="font-size:14px;font-weight:700;color:#c96a44;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;">Blog</div>
+    <h1 style="font-family:Newsreader,serif;font-weight:500;font-size:52px;line-height:1.04;letter-spacing:-0.02em;margin:0 0 16px;color:#12433f;max-width:640px;">Saveti za zdrav i vedar osmeh</h1>
+    <p style="font-size:18px;line-height:1.6;color:#41544f;max-width:560px;margin:0;">Praktični saveti naših stomatologa o nezi zuba, estetici i savremenim tretmanima.</p>
+  </section>
+
+  <section style="max-width:1200px;margin:0 auto;padding:0 32px 24px;">
+    <div id="cat-chips" style="display:flex;flex-wrap:wrap;gap:9px;"></div>
+  </section>
+
+  <section id="featured-section" style="max-width:1200px;margin:0 auto;padding:16px 32px 8px;">
+    <a href={`/blog/${featured.slug}`} style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:0;background:#fff;border-radius:26px;overflow:hidden;border:1px solid rgba(18,67,63,0.07);box-shadow:0 24px 60px rgba(18,67,63,0.08);color:inherit;">
+      <div style={`aspect-ratio:16/11;background:${featured.bg};display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);font-size:13px;font-weight:600;`}>Slika članka</div>
+      <div style="padding:44px;display:flex;flex-direction:column;justify-content:center;">
+        <div style="display:flex;gap:10px;font-size:12px;font-weight:700;color:#c96a44;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:14px;"><span>Izdvojeno · {featured.kategorija}</span><span style="color:#b7bcb9;">· {featured.vreme}</span></div>
+        <h2 style="font-family:Newsreader,serif;font-size:34px;font-weight:500;line-height:1.12;letter-spacing:-0.01em;margin:0 0 14px;color:#12433f;">{featured.naslov}</h2>
+        <p style="font-size:16px;line-height:1.6;color:#556661;margin:0 0 22px;">{featured.opis}</p>
+        <span style="font-size:15px;font-weight:700;color:#1c6b62;">Pročitaj članak →</span>
+      </div>
+    </a>
+  </section>
+
+  <section style="max-width:1200px;margin:0 auto;padding:32px 32px 72px;">
+    <div id="posts-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;"></div>
+  </section>
+
+</div>
+
+<script define:vars={{ postsForClient, cats }}>
+(function() {
+  let activeCat = 'Sve';
+
+  const chipBase = 'padding:9px 17px;border-radius:999px;border:1px solid rgba(18,67,63,0.2);background:#fff;color:#12433f;font-family:Manrope,sans-serif;font-size:14px;font-weight:600;cursor:pointer;';
+  const chipSel  = 'padding:9px 17px;border-radius:999px;border:1px solid #12433f;background:#12433f;color:#f7f4ee;font-family:Manrope,sans-serif;font-size:14px;font-weight:600;cursor:pointer;';
+
+  function render() {
+    document.getElementById('cat-chips').innerHTML = cats.map(c =>
+      `<button onclick="window.__blogCat('${c}')" style="${c===activeCat?chipSel:chipBase}">${c}</button>`
+    ).join('');
+
+    const filtered = activeCat === 'Sve' ? postsForClient : postsForClient.filter(p => p.kategorija === activeCat);
+    const showFeatured = activeCat === 'Sve';
+    document.getElementById('featured-section').style.display = showFeatured ? 'block' : 'none';
+
+    const gridPosts = showFeatured ? filtered.slice(1) : filtered;
+    document.getElementById('posts-grid').innerHTML = gridPosts.map(p => `
+      <a href="/blog/${p.slug}" style="display:flex;flex-direction:column;background:#fff;border-radius:22px;overflow:hidden;border:1px solid rgba(18,67,63,0.07);color:inherit;">
+        <div style="aspect-ratio:16/10;background:${p.bg};display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.65);font-size:13px;font-weight:600;">Slika članka</div>
+        <div style="padding:22px;display:flex;flex-direction:column;flex:1;">
+          <div style="display:flex;gap:10px;font-size:12px;font-weight:700;color:#c96a44;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px;"><span>${p.kategorija}</span><span style="color:#b7bcb9;">· ${p.vreme}</span></div>
+          <h3 style="font-family:Newsreader,serif;font-size:22px;font-weight:500;line-height:1.2;margin:0 0 10px;color:#12433f;">${p.naslov}</h3>
+          <p style="font-size:14px;line-height:1.55;color:#667772;margin:0 0 16px;flex:1;">${p.opis}</p>
+          <span style="font-size:14px;font-weight:700;color:#1c6b62;">Pročitaj →</span>
+        </div>
+      </a>
+    `).join('');
+  }
+
+  window.__blogCat = function(c) { activeCat = c; render(); };
+  document.addEventListener('DOMContentLoaded', render);
+})();
+</script>
+
+</Layout>
